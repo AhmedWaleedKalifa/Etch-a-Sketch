@@ -14,7 +14,7 @@ btn.onclick=function(){
      });
      for(let i=0;i<(num*num);i++){
         arr[i]=document.createElement("div");
-        arr[i].setAttribute("style",`width:calc(90svw/${num});height:calc(90svw/${num});`);
+        arr[i].setAttribute("style",`width:calc(70svw/${num});height:calc(70svw/${num});`);
         container.appendChild(arr[i]);
     }
     arr.forEach(element=>{
