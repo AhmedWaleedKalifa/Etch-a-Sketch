@@ -1,7 +1,6 @@
 const container=document.querySelector("#container");
 const btn=document.querySelector("#btn");
 const btn2=document.querySelector("#btn2");
-const btn3=document.querySelector("#btn3");
 const arr=[];
 let num=16;
 let mouseDown = 0;
@@ -33,8 +32,6 @@ let color="black";
 btn2.onclick=function(){
     color=prompt("Type the color you need");
 }
-btn3.onclick=function(){
 
-}
 
 
