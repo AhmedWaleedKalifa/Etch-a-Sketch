@@ -5,7 +5,7 @@ const clear=document.querySelector("#clear");
 const colors=document.querySelector("#colors");
 const colorDiv=Array.from(document.querySelectorAll("#colors div"));
 let color="black";
-
+// const random=document.querySelector(".random");
 const arr=[];
 let num=16;
 let myArr=Array.from(document.querySelectorAll("#container div"));
@@ -47,6 +47,9 @@ clear.addEventListener("click",()=>{
         arr[i].style.background="white";
     }
 })
+// random.addEventListener("click",()=>{
+    
+// })
 colorDiv.forEach(element=>{
 element.addEventListener("click",()=>{
     color=element.getAttribute("class");
@@ -55,6 +58,5 @@ element.addEventListener("click",()=>{
 btn2.onclick=function(){
     color=prompt("Type the color you need");
 }
-
 
 

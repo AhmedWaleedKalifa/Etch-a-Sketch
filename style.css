@@ -42,14 +42,16 @@ body{
 }
 #colors{
     display: flex;
-    background-color: aliceblue;
+    background-color: rgb(223, 211, 147);
     padding: 5px;
+    border-radius: 15px;
 }
 #colors div{
     width: 40px;
     height: 40px;
     border:2px solid silver;
     border-radius: 50%;
+    flex:1 0 auto;
 }
 .red{
     background-color: red;
@@ -69,3 +71,20 @@ body{
 .yellow{
     background-color: yellow;
 }
+.random{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+/* #colors .random .ra{
+flex:1 1 auto;
+width: 35px;
+height: 3px;
+border: 0px solid red;
+border-radius: 50%;
+} */
+
