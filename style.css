@@ -26,7 +26,7 @@ body{
 /* #container div:hover {
     background-color: blue;
 } */
-#btn,#btn2{
+#btn,#btn2, #clear{
     background-color: rgb(185, 221, 253);
     margin:30px auto;
     text-align: center;
@@ -39,4 +39,33 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#colors{
+    display: flex;
+    background-color: aliceblue;
+    padding: 5px;
+}
+#colors div{
+    width: 40px;
+    height: 40px;
+    border:2px solid silver;
+    border-radius: 50%;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.black{
+    background-color: black;
+}
+.blue{
+    background-color: blue;
+}
+.white{
+    background-color: white;
+}
+.yellow{
+    background-color: yellow;
 }
