@@ -18,30 +18,31 @@ body{
     flex-wrap: wrap;
 }
 #container div{
-    background-color: white;
-    /* width:5.625svw;
-    height:5.625svw; */
-    padding: 0;
+    background-color:transparent;
+    padding: 10px;
 }
-/* #container div:hover {
-    background-color: blue;
-} */
-#btn,#btn2, #clear{
+#container div:hover {
+    background-color: rgba(93, 93, 156, 0.616);
+    border:1px solid rgba(255, 255, 255, 0.384);
+}
+#btn,#btn2, #clear,#background,#opacity{
     background-color: rgb(224, 231, 231);
     text-align: center;
     width: 20svw;
-    font-size: 18px;
     border-radius: 7px;
     padding:12px;
     border:0 solid red;
+    font-size: 15px;
+    font-weight: 500;
 }
+
 .btn{
     display: flex;
     justify-content: center;
     align-items: center;
     gap:16px;
     background-color: #b5b6b6;
-    margin: 20px;
+    /* margin: 20px; */
     padding: 10px;
     border-radius: 20px;
 }
@@ -50,6 +51,7 @@ body{
     background-color: rgb(223, 211, 147);
     padding: 5px;
     border-radius: 15px;
+    flex:2 1 auto;
 }
 #colors div{
     width: 40px;
@@ -75,6 +77,15 @@ body{
 }
 .yellow{
     background-color: yellow;
+}
+.purple{
+    background-color: purple;
+}
+.orange{
+    background-color: orange;
+}
+.cyan{
+    background-color: cyan;
 }
 .random{
     display: flex;
