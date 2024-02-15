@@ -2,7 +2,8 @@ body{
     background-color: #ecebeb;
 }
 * {
-    box-sizing: border-box;
+    box-sizing: content-box;
+    font-size: 1.5svw;
   }
 #container{
     padding: 0;
@@ -16,10 +17,10 @@ body{
     align-items: center;
     flex:1 0 auto;
     flex-wrap: wrap;
+    border: 10px solid gray;
 }
 #container div{
     background-color:transparent;
-    padding: 10px;
 }
 #container div:hover {
     background-color: rgba(93, 93, 156, 0.616);
@@ -30,9 +31,9 @@ body{
     width: 20svw;
     height: 5svw;
     border-radius: 7px;
-    padding:12px;
+    padding:6px;
     border:0 solid red;
-    font-size: 15px;
+    font-size: 1em;
     font-weight: 500;
 }
 
