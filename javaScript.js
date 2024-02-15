@@ -61,6 +61,7 @@ clear.addEventListener("click",()=>{
 colorDiv.forEach(element=>{
 element.addEventListener("click",()=>{
     colorTemp=color=element.getAttribute("id");
+    btn2.style.background=color;
 })
 })
 btn2.onclick=function(){
