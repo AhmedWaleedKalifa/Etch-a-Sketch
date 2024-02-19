@@ -3,7 +3,7 @@ body{
 }
 * {
     box-sizing: content-box;
-    font-size: 1.5svw;
+    font-size: 1.3svw;
   }
 #container{
     padding: 0;
@@ -15,7 +15,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex:1 0 auto;
     flex-wrap: wrap;
     border: 10px solid gray;
 }
@@ -26,13 +25,12 @@ body{
 #container div:hover {
     background-color: rgb(135, 135, 250);
 }
-#btn,#btn2, #clear,#background,#opacity{
+#btn,#btn2, #clear,#background,#opacity,.big{
     background-color: rgb(224, 231, 231);
     text-align: center;
-    width: 20svw;
+    width: 10svw;
     height: 5svw;
     padding:6px;
-    border:0 solid red;
     font-size: 1em;
     font-weight: 500;
     border: 2px solid gray;
@@ -43,12 +41,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:16px;
+    gap:5px;
     background-color: #b5b6b6;
-    /* margin: 20px; */
-    padding: 10px;
-
-    border-radius: 20px;
+    padding: 8px;
+    border-radius: 15px;
 }
 
 #colors{
@@ -63,7 +59,6 @@ body{
     height: 40px;
     border:2px solid silver;
     border-radius: 50%;
-    flex:1 0 auto;
 }
 #colors div:hover{
     outline: 1px solid gray;

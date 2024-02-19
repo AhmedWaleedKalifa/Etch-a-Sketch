@@ -7,7 +7,9 @@ const background=document.querySelector("#background");
 const colorDiv=Array.from(document.querySelectorAll("#colors div"));
 const opacity=document.querySelector("#opacity");
 const eraser=document.querySelector(".eraser");
+const big=document.querySelector(".big");
 let color="#000000";
+let size=1;
 let backgroundColor="white";
 let opacityDegree="";
 let opacityDigit="";
@@ -24,13 +26,53 @@ for(let i=0;i<(num*num);i++){
     arr[i].setAttribute("style",`width:calc(70svw/${num});height:calc(70svw/${num});`);
     container.appendChild(arr[i]);
 }
-arr.forEach(element=>{
-    element.addEventListener("mouseover",(e)=>{
-        if(mouseDown){
-            element.style.background=color;
-        }
-    });
-});
+// arr.forEach(element=>{
+//     element.addEventListener("mouseover",(e)=>{
+//         if(mouseDown&&size==1){
+//             element.style.background=color;
+//         }
+//     });
+// });
+  for(let i=0;i<arr.length;i++){
+        arr[i].addEventListener("mouseover",()=>{
+            if(mouseDown&&size==1){
+                arr[i].style.background=color;
+            }else if(mouseDown&&size==2&&(i+1)%num!=0){
+                arr[i].style.backgroundColor=color;
+                arr[i+1].style.background=color;
+                arr[i+num].style.background=color;
+                arr[i+1+num].style.background=color;
+            }else if(mouseDown &&size==3&&i%num!=0&&(i+1)%num!=0){
+                arr[i].style.backgroundColor=color;
+                arr[i+1].style.background=color;
+                arr[i-1].style.background=color;
+                arr[i+num].style.background=color;
+                arr[i+1+num].style.background=color;
+                arr[i-1+num].style.background=color;
+                arr[i-num].style.background=color;
+                arr[i-1-num].style.background=color;
+                arr[i+1-num].style.background=color;
+            }else if(mouseDown&&size>=4&&i%num!=0&&(i+1)%num!=0&&(i+2)%num!=0){
+                arr[i].style.backgroundColor=color;
+                arr[i+1].style.background=color;
+                arr[i+2].style.background=color;
+                arr[i-1].style.background=color;
+                arr[i+num].style.background=color;
+                arr[i+1+num].style.background=color;
+                arr[i+2+num].style.background=color
+                arr[i-1+num].style.background=color;
+                arr[i-num].style.background=color;
+                arr[i-1-num].style.background=color;
+                arr[i+1-num].style.background=color;
+                arr[i+2-num].style.background=color;
+                arr[i+2+num].style.background=color;
+                arr[i+2*num].style.background=color;
+                arr[i+1+2*num].style.background=color;
+                arr[i+2+2*num].style.background=color;
+                arr[i-1+2*num].style.background=color;
+            }
+        })
+    }
 btn.onclick=function(){
    
     for(let i=0;i<(num*num);i++){
@@ -49,6 +91,13 @@ btn.onclick=function(){
             }
         });
     });
+    for(let i=0;i<arr.length;i++){
+        arr[i].addEventListener("mouseover",()=>{
+            if(mouseDown&&size==1){
+                arr[i].style.background=color;
+            }
+        })
+    }
     btn.textContent=num;
 }
 clear.addEventListener("click",()=>{
@@ -78,6 +127,10 @@ background.onclick=function(){
 eraser.addEventListener("click",()=>{
     color="transparent";
     btn2.style.background="transparent";
+})
+big.addEventListener("click",()=>{
+    size=prompt("Select font size from 1 to 5");
+    big.textContent=size;
 })
 opacity.addEventListener("click",()=>{
     if(colorTemp!=""){
