@@ -17,7 +17,6 @@ let colorTemp="";
 // const random=document.querySelector(".random");
 const arr=[];
 let num=16;
-let myArr=Array.from(document.querySelectorAll("#container div"));
 let mouseDown = 0;
 document.body.onmousedown = () => mouseDown = 1;
 document.body.onmouseup = () => mouseDown = 0;
@@ -37,7 +36,8 @@ for(let i=0;i<(num*num);i++){
         arr[i].addEventListener("mouseover",()=>{
             if(mouseDown&&size==1){
                 arr[i].style.background=color;
-            }else if(mouseDown&&size==2&&(i+1)%num!=0){
+            }
+            else if(mouseDown&&size==2&&(i+1)%num!=0){
                 arr[i].style.backgroundColor=color;
                 arr[i+1].style.background=color;
                 arr[i+num].style.background=color;
@@ -84,17 +84,44 @@ btn.onclick=function(){
         arr[i].setAttribute("style",`width:calc(70svw/${num});height:calc(70svw/${num});`);
         container.appendChild(arr[i]);
     }
-    arr.forEach(element=>{
-        element.addEventListener("mouseover",(e)=>{
-            if(mouseDown){
-                element.style.background=color;
-            }
-        });
-    });
     for(let i=0;i<arr.length;i++){
         arr[i].addEventListener("mouseover",()=>{
             if(mouseDown&&size==1){
                 arr[i].style.background=color;
+            }else if(mouseDown&&size==2&&(i+1)%num!=0){
+                arr[i].style.backgroundColor=color;
+                arr[i+1].style.background=color;
+                arr[Number(i)+Number(num)].style.background=color;
+                arr[Number(i)+Number(num)+1].style.background=color;
+            }
+            else if(mouseDown &&size==3&&i%num!=0&&(i+1)%num!=0){
+                arr[i].style.backgroundColor=color;
+                arr[i+1].style.background=color;
+                arr[i-1].style.background=color;
+                arr[i+Number(num)].style.background=color;
+                arr[i+1+Number(num)].style.background=color;
+                arr[i-1+Number(num)].style.background=color;
+                arr[i-Number(num)].style.background=color;
+                arr[i-1-Number(num)].style.background=color;
+                arr[i+1-Number(num)].style.background=color;
+            }else if(mouseDown&&size>=4&&i%num!=0&&(i+1)%num!=0&&(i+2)%num!=0){
+                arr[i].style.backgroundColor=color;
+                arr[i+1].style.background=color;
+                arr[i+2].style.background=color;
+                arr[i-1].style.background=color;
+                arr[i+Number(num)].style.background=color;
+                arr[i+1+Number(num)].style.background=color;
+                arr[i+2+Number(num)].style.background=color
+                arr[i-1+Number(num)].style.background=color;
+                arr[i-Number(num)].style.background=color;
+                arr[i-1-Number(num)].style.background=color;
+                arr[i+1-Number(num)].style.background=color;
+                arr[i+2-Number(num)].style.background=color;
+                arr[i+2+Number(num)].style.background=color;
+                arr[i+2*Number(num)].style.background=color;
+                arr[i+1+2*Number(num)].style.background=color;
+                arr[i+2+2*Number(num)].style.background=color;
+                arr[i-1+2*Number(num)].style.background=color;
             }
         })
     }
