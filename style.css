@@ -23,18 +23,20 @@ body{
     background-color:transparent;
 }
 #container div:hover {
-    background-color: rgba(93, 93, 156, 0.616);
+    background-color: transparent;
+    background-color: rgba(93, 93, 156, 0.808);
 }
 #btn,#btn2, #clear,#background,#opacity{
     background-color: rgb(224, 231, 231);
     text-align: center;
     width: 20svw;
     height: 5svw;
-    border-radius: 7px;
     padding:6px;
     border:0 solid red;
     font-size: 1em;
     font-weight: 500;
+    border: 2px solid gray;
+    border-radius: 15px;
 }
 
 .btn{
@@ -45,8 +47,10 @@ body{
     background-color: #b5b6b6;
     /* margin: 20px; */
     padding: 10px;
+
     border-radius: 20px;
 }
+
 #colors{
     display: flex;
     background-color: rgb(223, 211, 147);
@@ -105,3 +109,12 @@ border: 0px solid red;
 border-radius: 50%;
 } */
 
+.eraser{
+    width: 50px;
+    height: 43px;
+    flex: 1 0 auto;
+    border-radius: 7px;
+    background-color: #ffffff60;
+    padding: 2px;
+    border: 2px solid gray;
+}

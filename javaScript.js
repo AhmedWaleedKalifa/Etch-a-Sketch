@@ -6,6 +6,7 @@ const colors=document.querySelector("#colors");
 const background=document.querySelector("#background");
 const colorDiv=Array.from(document.querySelectorAll("#colors div"));
 const opacity=document.querySelector("#opacity");
+const eraser=document.querySelector(".eraser");
 let color="#000000";
 let backgroundColor="white";
 let opacityDegree="";
@@ -74,7 +75,10 @@ background.onclick=function(){
     background.style.background=backgroundColor;
     container.style.background=backgroundColor;
 }
-
+eraser.addEventListener("click",()=>{
+    color="transparent";
+    btn2.style.background="transparent";
+})
 opacity.addEventListener("click",()=>{
     if(colorTemp!=""){
         color=colorTemp;
