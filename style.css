@@ -54,7 +54,7 @@ table {
     justify-content: center;
     align-items: center;
     gap: 12px;
-    background-color: rgb(184, 89, 11);
+    background-image: url(./images/wood.jpg);
     border-radius: 30px;
     padding:8px;
 }
