@@ -22,7 +22,7 @@ document.body.onmousedown = () => mouseDown = 1;
 document.body.onmouseup = () => mouseDown = 0;
 for(let i=0;i<(num*num);i++){
     arr[i]=document.createElement("div");
-    arr[i].setAttribute("style",`width:calc(70svw/${num});height:calc(70svw/${num});`);
+    arr[i].setAttribute("style",`width:calc(75svw/${num});height:calc(75svw/${num});`);
     container.appendChild(arr[i]);
 }
 // arr.forEach(element=>{
@@ -108,7 +108,7 @@ btn.onclick=function(){
      num=prompt("Enter the number N*N of the grid");
      for(let i=0;i<(num*num);i++){
         arr[i]=document.createElement("div");
-        arr[i].setAttribute("style",`width:calc(70svw/${num});height:calc(70svw/${num});`);
+        arr[i].setAttribute("style",`width:calc(75svw/${num});height:calc(75svw/${num});`);
         container.appendChild(arr[i]);
     }
     for(let i=0;i<arr.length;i++){
