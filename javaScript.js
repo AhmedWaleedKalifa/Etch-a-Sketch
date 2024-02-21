@@ -213,9 +213,7 @@ clear.addEventListener("click",()=>{
         arr[i].style.background="transparent";
     }
 })
-// random.addEventListener("click",()=>{
-    
-// })
+
 colorDiv.forEach(element=>{
 element.addEventListener("click",()=>{
     colorTemp=color=element.getAttribute("id");
