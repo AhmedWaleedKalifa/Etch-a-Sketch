@@ -189,6 +189,8 @@ btn.onclick=function(){
                 arr[i+2-2*Number(num)].style.background=color;
                 arr[i-1-2*Number(num)].style.background=color;
                 arr[i-2-2*Number(num)].style.background=color;
+            }else if(p==1){
+                arr[i].style.background=color;
             }
         })
     }
