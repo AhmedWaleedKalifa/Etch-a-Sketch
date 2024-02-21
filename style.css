@@ -54,15 +54,19 @@ table {
     justify-content: center;
     align-items: center;
     gap: 12px;
-    background-image: url(./images/wood2.jpg);
+    /* background-image: url(./images/wood2.jpg); */
     border-radius: 30px;
     padding:8px;
 }
-#container{
+/* .bigContainer{
+    display: flex;
+    flex-wrap: wrap;
+} */
+.container{
     padding: 0;
     border: 0 solid white;
-    width: 75svw;
-    height: 75svw;
+    width: 80svw;
+    height: 80svw;
     /* max-width: 930px;
     max-height: 930px; */
     background-color: white;
@@ -75,11 +79,11 @@ table {
     border-radius: 15px;
     flex-direction: column;
 }
-#container div{
+.container div{
     background-color:transparent;
     z-index: 2;
 }
-#container div:hover {
+.container div:hover {
     background-color: rgb(135, 135, 250);
 }
 .btn button{
@@ -103,6 +107,8 @@ table {
     align-items: center;
     gap:6px;
     background-color: #b5b6b6;
+    background-image: url(./images/wood4.jpg);
+    border-radius: 20px;
     padding: 15px;
     flex-direction: column;
     width: 140px;
@@ -111,7 +117,8 @@ table {
 #colors{
     display: flex;
     background-color: rgb(223, 211, 147);
-    padding: 8px;
+    border: 2px solid gray;
+    padding:10px 8px;
     border-radius: 50px;
     flex-direction: column;
     gap: 2px;
@@ -176,5 +183,5 @@ border-radius: 50%;
     background-color: transparent;
 }
 .eraser:hover{
-    background-color:rgb(233, 44, 44);
+    background-color:rgba(255, 255, 255, 0.432);
 }

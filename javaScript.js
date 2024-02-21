@@ -1,4 +1,4 @@
-const container=document.querySelector("#container");
+const container=document.querySelector(".container");
 const btn=document.querySelector("#btn");
 const btn2=document.querySelector("#btn2");
 const clear=document.querySelector("#clear");
@@ -22,16 +22,21 @@ document.body.onmousedown = () => mouseDown = 1;
 document.body.onmouseup = () => mouseDown = 0;
 for(let i=0;i<(num*num);i++){
     arr[i]=document.createElement("div");
-    arr[i].setAttribute("style",`width:calc(75svw/${num});height:calc(75svw/${num});`);
+    arr[i].setAttribute("style",`width:calc(80svw/${num});height:calc(80svw/${num});`);
     container.appendChild(arr[i]);
 }
-// arr.forEach(element=>{
-//     element.addEventListener("mouseover",(e)=>{
-//         if(mouseDown&&size==1){
-//             element.style.background=color;
-//         }
-//     });
-// });
+arr.forEach(element=>{
+    element.addEventListener("click",(e)=>{
+            element.style.background=color;
+        
+    });
+});
+arr.forEach(element=>{
+    element.addEventListener("dblclick",(e)=>{
+            element.style.background="transparent";
+        
+    });
+});
   for(let i=0;i<arr.length;i++){
         arr[i].addEventListener("mouseover",()=>{
             if(mouseDown&&size==1){
@@ -106,6 +111,9 @@ btn.onclick=function(){
         container.removeChild(arr[i]);
     }
      num=prompt("Enter the number N*N of the grid");
+     if(num<1){
+        num=16;
+     }
      for(let i=0;i<(num*num);i++){
         arr[i]=document.createElement("div");
         arr[i].setAttribute("style",`width:calc(75svw/${num});height:calc(75svw/${num});`);
@@ -179,6 +187,18 @@ btn.onclick=function(){
             }
         })
     }
+    arr.forEach(element=>{
+        element.addEventListener("click",(e)=>{
+                element.style.background=color;
+            
+        });
+    });
+    arr.forEach(element=>{
+        element.addEventListener("dblclick",(e)=>{
+                element.style.background="transparent";
+            
+        });
+    });
     btn.textContent=num;
 }
 clear.addEventListener("click",()=>{
@@ -197,6 +217,9 @@ element.addEventListener("click",()=>{
 })
 btn2.onclick=function(){
     color=prompt("Type the color you need");
+    if(color<1){
+        color="black";
+    }
     btn2.style.background=setColorEquivalent(color);
     colorTemp=color;
 }
@@ -211,6 +234,9 @@ eraser.addEventListener("click",()=>{
 })
 big.addEventListener("click",()=>{
     size=prompt("Select font size from 1 to 5");
+    if(size<1){
+        size=1;
+    }
     big.textContent=size;
 })
 opacity.addEventListener("click",()=>{
