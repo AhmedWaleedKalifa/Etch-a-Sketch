@@ -116,7 +116,7 @@ btn.onclick=function(){
      }
      for(let i=0;i<(num*num);i++){
         arr[i]=document.createElement("div");
-        arr[i].setAttribute("style",`width:calc(75svw/${num});height:calc(75svw/${num});`);
+        arr[i].setAttribute("style",`width:calc(80svw/${num});height:calc(80svw/${num});`);
         container.appendChild(arr[i]);
     }
     for(let i=0;i<arr.length;i++){
