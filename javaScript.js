@@ -8,8 +8,10 @@ const colorDiv=Array.from(document.querySelectorAll("#colors div"));
 const opacity=document.querySelector("#opacity");
 const eraser=document.querySelector(".eraser");
 const big=document.querySelector(".big");
+const pen=document.querySelector(".pen")
 let color="#000000";
 let size=1;
+let p=-1;
 let backgroundColor="white";
 let opacityDegree="";
 let opacityDigit="";
@@ -18,6 +20,7 @@ let colorTemp="";
 const arr=[];
 let num=16;
 let mouseDown = 0;
+
 document.body.onmousedown = () => mouseDown = 1;
 document.body.onmouseup = () => mouseDown = 0;
 for(let i=0;i<(num*num);i++){
@@ -102,6 +105,8 @@ arr.forEach(element=>{
                 arr[i+2-2*num].style.background=color;
                 arr[i-1-2*num].style.background=color;
                 arr[i-2-2*num].style.background=color;
+            }else if(p==1){
+                arr[i].style.background=color;
             }
         })
     }
@@ -239,6 +244,9 @@ big.addEventListener("click",()=>{
     }
     big.textContent=size;
 })
+pen.onclick=function(){
+    p=p*-1;
+}
 opacity.addEventListener("click",()=>{
     if(colorTemp!=""){
         color=colorTemp;
