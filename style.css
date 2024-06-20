@@ -47,8 +47,9 @@ table {
 }
 .main{
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 8px;
+    margin: 20px;
 }
 .tools{
     display:flex;
