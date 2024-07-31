@@ -123,6 +123,11 @@ NumberOfPixelsInput.addEventListener("input",function(){
         container.removeChild(arr[i]);
     }
      num=NumberOfPixelsInput.value;
+     if(NumberOfPixelsInput.value > 50){
+        NumberOfPixelsInput.setAttribute("step","5")
+     }else if(NumberOfPixelsInput.value>100){
+        NumberOfPixelsInput.setAttribute("step","10")
+     }
      if(num<1){
         num=16;
      }
