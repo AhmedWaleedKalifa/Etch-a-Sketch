@@ -37,11 +37,10 @@ grid.addEventListener("click",function(){
     if(gridVar==1){
         gridVar=0;
         grid.style.background="rgb(224, 231, 231)"
-        
     }else{
         gridVar=1
         grid.style.fontSize="25px";
-        grid.style.background="rgb(180,180,180)"
+        grid.style.background="url(./images/grid.jpg)"
 
     }
     createBoard();
