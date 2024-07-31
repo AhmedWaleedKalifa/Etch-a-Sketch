@@ -85,7 +85,8 @@ table {
 .container div:hover {
     background-color: rgb(135, 135, 250);
 }
-.btn button ,.btn .colorContainer,.btn .backgroundColorContainer, .btn .numberOfPixels,.btn .fontSize ,.btn .opacity{
+.btn button ,.btn .colorContainer,.btn .backgroundColorContainer, .btn .numberOfPixels,.btn .fontSize ,.btn .opacity,.grid{
+   cursor: pointer;
     background-color: rgb(224, 231, 231);
     text-align: center;
     width: 140px;
@@ -96,7 +97,8 @@ table {
     border: 2px solid gray;
     border-radius: 16px;
 }
-.btn button:hover {
+.btn button:hover,.btn button:hover,.btn .colorContainer:hover,.btn .backgroundColorContainer:hover, .btn .numberOfPixels:hover,.btn .fontSize:hover ,.btn .opacity:hover,.grid:hover{
+    
     background-color: #ffffff;
 }
 
@@ -198,4 +200,14 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     flex-direction:column;
     gap: 8px;
+}
+
+.node{
+    
+    border:1px solid black;
+    box-sizing: border-box;
+}
+.grid{
+    font-size: 25px;
+    text-align: center;
 }

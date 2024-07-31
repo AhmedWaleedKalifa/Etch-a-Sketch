@@ -19,6 +19,9 @@ const fontSizeInputParagraph=document.querySelector(".btn .fontSize .font")
 const opacityInput=document.querySelector(".opacity input")
 const opacityParagraph=document.querySelector(".btn .opacity .op")
 
+const grid=document.querySelector(".grid")
+
+let gridVar=0;
 let color="#000000";
 let size=1;
 let p=0;
@@ -29,6 +32,21 @@ let colorTemp="";
 const arr=[];
 let num=16;
 let mouseDown = 0;
+
+grid.addEventListener("click",function(){
+    if(gridVar==1){
+        gridVar=0;
+        grid.style.background="rgb(224, 231, 231)"
+        
+    }else{
+        gridVar=1
+        grid.style.fontSize="25px";
+        grid.style.background="rgb(180,180,180)"
+
+    }
+    createBoard();
+
+})
 
 document.body.onmousedown = () => mouseDown = 1;
 document.body.onmouseup = () => mouseDown = 0;
@@ -118,7 +136,13 @@ arr.forEach(element=>{
         })
     }
 
-NumberOfPixelsInput.addEventListener("input",function(){
+NumberOfPixelsInput.addEventListener("input",createBoard)
+clear.addEventListener("click",()=>{
+    for(let i=0;i<(num*num);i++){
+        arr[i].style.background="transparent";
+    }
+})
+function createBoard(){
     for(let i=0;i<(num*num);i++){
         container.removeChild(arr[i]);
     }
@@ -134,7 +158,13 @@ NumberOfPixelsInput.addEventListener("input",function(){
      NumberOfPixelsInputParagraph.textContent=num;
      for(let i=0;i<(num*num);i++){
         arr[i]=document.createElement("div");
-        arr[i].setAttribute("style",`width:calc(80svw/${num});height:calc(80svw/${num});`);
+        // arr[i].setAttribute("class","node")
+        if(gridVar==1){
+            arr[i].setAttribute("style",`width:calc(80svw/${num});height:calc(80svw/${num});border:1px solid black;box-sizing: border-box;`);
+        }else{
+            arr[i].setAttribute("style",`width:calc(80svw/${num});height:calc(80svw/${num});`);
+
+        }
         container.appendChild(arr[i]);
     }
     for(let i=0;i<arr.length;i++){
@@ -220,13 +250,7 @@ NumberOfPixelsInput.addEventListener("input",function(){
         });
     });
     btn.textContent=num;
-})
-clear.addEventListener("click",()=>{
-    for(let i=0;i<(num*num);i++){
-        arr[i].style.background="transparent";
-    }
-})
-
+}
 
 colorInput.addEventListener("input",function(){
     color=colorInput.value;
