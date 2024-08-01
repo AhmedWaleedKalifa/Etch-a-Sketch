@@ -254,6 +254,10 @@ function createBoard(){
 colorInput.addEventListener("input",function(){
     color=colorInput.value;
     colorParagraph.style.color=color
+    colorTemp=color
+    opacityDegree=10;
+    setOpacity();
+
 })
 
 backgroundColorInput.addEventListener("input",function(){
@@ -278,13 +282,20 @@ colorDiv.forEach(element=>{
     element.addEventListener("click",()=>{
         colorTemp=color=element.getAttribute("id");
         colorParagraph.style.color=color;
+        opacityDegree=10;
+        setOpacity();
     })
     })
 
 
-opacityInput.addEventListener("input",()=>{
+opacityInput.addEventListener("input",setOpacity)
+
+function setOpacity(){
     if(colorTemp!=""){
         color=colorTemp;
+    }
+    if(opacityDegree==""){
+        opacityDegree=10;
     }
     opacityDegree=opacityInput.value
     opacityParagraph.textContent=opacityDegree
@@ -315,5 +326,4 @@ opacityInput.addEventListener("input",()=>{
     colorTemp=color;
     color=color+postOpactiyDegree;
 
-})
-
+}
